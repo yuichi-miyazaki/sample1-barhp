@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Bar NOBODY</title>
+  
+  <!-- リセットCSS 読み込み -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@3.0.2/destyle.css">
+  
+  <!-- style.css 読み込み -->
+  <link rel="stylesheet" href="./css/style.css">
+  
+  <!-- Google Fonts 読み込み -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+
+</head>
+  
+<body>
+
+    <script>
+        // 画像のパスをリスト化
+        const images = [
+          "images/hero1.jpg",
+          "images/hero2.jpg",
+          "images/hero3.jpg"
+        ];
+  
+        let currentIndex = 0;
+        const section = document.querySelector(".section1");
+  
+        function changeBackground() {
+          // 次の画像に変更
+          section.style.backgroundImage = `url(${images[currentIndex]})`;
+  
+          // インデックスを更新
+          currentIndex = (currentIndex + 1) % images.length;
+        }
+  
+        // 5秒ごとに背景画像を変更
+        setInterval(changeBackground, 5000);
+  
+        // 初回適用
+        changeBackground();
+      </script>
+  
+  <header>
+    <div class="container">
+        <div class="low">
+            <a href="./" class="logo"><img src="./images/logo.JPG" alt=""></a>
+            <ul>
+                <li><a href="#about">about</a></li>
+                <li><a href="#access">access</a></li>
+                <li><a href="#access">contact</a></li>
+            </ul>
+        </div>
+    </div>
+  </header>
+  
+  <main>
+
+    <section class="section1">
+        <div class="container">
+            <h1>Bar NOBODY</h1>
+            <p class="text">どこよりもリーズナブル、どこよりも楽しく。</p>
+        </div>
+        <div class="filter"></div>
+    </section>
+
+    <section class="gallery">
+        <div class="gallery-wrapper">
+          <div class="gallery-track">
+            <img src="images/gallery1.jpg" alt="Image 1">
+            <img src="images/gallery2.jpg" alt="Image 2">
+            <img src="images/gallery3.jpg" alt="Image 3">
+            <img src="images/gallery4.jpg" alt="Image 4">
+            <img src="images/gallery5.jpg" alt="Image 5">
+            <img src="images/gallery6.jpg" alt="Image 6">
+            <img src="images/gallery7.jpg" alt="Image 7">
+            <!-- ループ用に同じ画像をもう一度並べる -->
+            <img src="images/gallery1.jpg" alt="Image 1">
+            <img src="images/gallery2.jpg" alt="Image 2">
+            <img src="images/gallery3.jpg" alt="Image 3">
+            <img src="images/gallery4.jpg" alt="Image 4">
+            <img src="images/gallery5.jpg" alt="Image 5">
+            <img src="images/gallery6.jpg" alt="Image 6">
+            <img src="images/gallery7.jpg" alt="Image 7">
+          </div>
+        </div>
+      </section>
+
+    <section class="section2" id="about">
+        <div class="container">
+            <div class="low">
+                <div class="col">
+                    <h2>おしゃれな空間で<br>楽しいひと時を！</h2>
+                    <hr>
+                    <p class="text">
+                        シックで落ち着きのある店内でネオンに照らされながら、
+                        ゆったりとお酒を楽しむもよし、スタッフ、お客様とで
+                        ワイワイ盛り上がるもよし。どんなシチュエーションでも
+                        楽しんでいただけます！
+                    </p>
+                </div>
+                <div class="col">
+                    <img src="./images/gallery1.jpg" width="100%" alt="">
+                </div>
+            </div>
+            <div class="low">
+                <div class="col">
+                    <h2>女性は飲み放題が<br>1時間500円！</h2>
+                    <hr>
+                    <p class="text">
+                        なんと『BarNOBODY』では
+                        <span>女性の飲み放題が1時間500円</span>となっております！とてもリーズナブルに
+                        バーを楽しむことができます！<span>男性も1時間1500円</span>と
+                        男性もお得な価格となっております！
+                    </p>
+                </div>
+                <div class="col">
+                    <img src="./images/plan1.webp" width="100%" alt="">
+                </div>
+            </div>
+            <div class="low">
+                <div class="col">
+                    <h2>なんと終日<br>ショット類が100円！</h2>
+                    <hr>
+                    <p class="text">
+                        一番驚かれるのは<span>ショット一杯100円</span>で飲める
+                        ということです！気軽にショットが飲めるので、
+                        罰ゲームに、酔いたいときにぜひ活用してください！
+                    </p>
+                </div>
+                <div class="col">
+                    <img src="./images/plan2.jpg" width="100%" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery">
+        <div class="gallery-wrapper">
+          <div class="gallery-track">
+            <img src="images/gallery1.jpg" alt="Image 1">
+            <img src="images/gallery2.jpg" alt="Image 2">
+            <img src="images/gallery3.jpg" alt="Image 3">
+            <img src="images/gallery4.jpg" alt="Image 4">
+            <img src="images/gallery5.jpg" alt="Image 5">
+            <img src="images/gallery6.jpg" alt="Image 6">
+            <img src="images/gallery7.jpg" alt="Image 7">
+            <!-- ループ用に同じ画像をもう一度並べる -->
+            <img src="images/gallery1.jpg" alt="Image 1">
+            <img src="images/gallery2.jpg" alt="Image 2">
+            <img src="images/gallery3.jpg" alt="Image 3">
+            <img src="images/gallery4.jpg" alt="Image 4">
+            <img src="images/gallery5.jpg" alt="Image 5">
+            <img src="images/gallery6.jpg" alt="Image 6">
+            <img src="images/gallery7.jpg" alt="Image 7">
+          </div>
+        </div>
+      </section>
+
+      <section class="map-section" id="access">
+        <div class="container">
+            <div class="left-column">
+                <h2>ACCESS</h2>
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.355186405047!2d135.5023093761975!3d34.670984084806065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e7455183c371%3A0x5d35b78db09afadc!2zQmFyIE5PQk9EWSjjg5Djg7wg44OO44O844OQ44OH44KjKSDlv4Pmlo7mqYsg44OA44O844OE77yG44Kr44Op44Kq44Kx!5e0!3m2!1sja!2sjp!4v1742804962904!5m2!1sja!2sjp" 
+                        width="600"
+                        height="450"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+            <div class="right-column">
+                <h2>Contact</h2>
+                <div class="social-links">
+                    <div class="box">
+                        <a href="https://www.instagram.com/bar_nobody" target="_blank">
+                            <img src="./images/instalogo.webp" alt="店長のインスタ">
+                        </a>
+                        <p class="text">👈BarNOBODY公式インスタ</p>
+                    </div>
+                    <div class="box">
+                        <a href="https://www.instagram.com/miyayouzk" target="_blank">
+                            <img src="./images/instalogo.webp" alt="店のインスタ">
+                        </a>
+                        <p class="text">👈店長のプライベートインスタ</p>
+                    </div>
+                    <div class="box">
+                        <p class="text">📞電話番号:070-3223-5295</p>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </section>
+    
+
+  </main>
+  
+  <footer>
+    <h2>楽しい時間をお約束します！ご来店心よりお待ちしております！(^^♪ byスタッフ一同</h2>
+  </footer>
+
+<!-- jsファイルの読み込み -->
+  <script src="./js/script.js"></script>
+  
+</body>
+
+</html>

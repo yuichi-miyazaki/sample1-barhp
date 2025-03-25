@@ -1,0 +1,315 @@
+/* 共通 */
+body {
+    font-family: 'Zen kaku Gothic New', sans-serif;
+    color: #ffffff;
+    background-color: #16161a;
+}
+
+body {
+    opacity: 0;
+    animation: fadeIn 2s ease-out forwards;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+.heading {
+    font-size: 60px;
+    font-weight: 700;
+    color: aquamarine;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+/* ヘッダー */
+header {
+    position: fixed; /*← fixedで固定 */
+    width: 100%;
+    font-weight: 700;
+    width: 100%;
+    z-index: 3;
+}
+
+header .container {
+    margin: 0 auto;
+}
+
+header img {
+    width: 70px;
+    height: 70px;
+    border-radius: 6px;
+}
+
+header .low {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000000;
+    height: 70px;
+    color: #ffffff;
+    padding: 0 20px;
+    font-size: 19px;
+}
+
+header ul {
+    display: flex;
+}
+
+header li {
+    margin-left: 20px;
+    transition-duration: .2s;
+}
+
+header li:hover {
+    color: aquamarine;
+    font-size: 20px;
+}
+
+/* セクション１ */
+.section1 {
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    margin-bottom: 45px;
+    transition: background-image 1s ease-in-out; /* 滑らかに切り替え */
+}
+
+.section1.fade {
+    animation: fadeIn 1s ease-in-out;
+}
+
+.section1 .container {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    z-index: 2;
+}
+
+.section1 h1 {
+    font-size: 80px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.section1 .text {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.section1 .filter {
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    opacity: 0.3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+/* セクション２ */
+.section2 {
+    margin-bottom: 45px;
+}
+
+.section2 .container {
+    width: 100%;
+    margin: 0 auto;
+    border: dotted 1px lightgray;
+    padding: 45px 0;
+}
+
+.section2 {
+    margin-bottom: 45px;
+}
+
+.section2 .container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.section2 .low {
+    display: flex;
+    justify-content: center; /* 中央揃え */
+    align-items: center; /* 縦の中央揃え */
+    flex-wrap: wrap; /* 画面幅が狭くなったら折り返し */
+    gap: 40px; /* カラム間の余白 */
+    text-align: center; /* テキストを中央揃え */
+    margin-bottom: 20px;
+}
+
+.section2 .col {
+    width: 100%;
+    max-width: 650px; /* 必要に応じて調整 */
+}
+
+.section2 img {
+    width: 100%;
+    max-width: 400px; /* 必要に応じて調整 */
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block; /* 画像の下に余白ができるのを防ぐ */
+    margin: 0 auto; /* 中央配置 */
+}
+
+.section2 h2 {
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.section2 hr {
+    margin-bottom: 20px;
+    border: dashed 1px;
+}
+
+.section2 .text {
+    font-size: 20px;
+}
+
+.section2 .text span {
+    color: aquamarine;
+    font-weight: 500;
+}
+
+/* ギャラリー */
+.gallery {
+    width: 100%;
+    overflow: hidden; /*余白から溢れた要素をカット、非表示にする。*/
+    background-color: black; /* 背景を黒に */
+    padding: 20px 0;
+    margin-bottom: 45px;
+  }
+
+  .gallery-wrapper {
+    width: 100%;
+    display: flex; /*横並びに設定。*/
+    overflow: hidden; /*余白から溢れた要素をカット、非表示にする。*/
+    position: relative;
+  }
+
+  .gallery-track {
+    display: flex;
+    animation: scroll 60s linear infinite; /* 60秒かけて無限ループ */
+  }
+
+  .gallery-track img {
+    width: 400px; /* 画像の幅（お好みで調整） */
+    height: 300px; /* 画像の高さ（お好みで調整） */
+    object-fit: cover;
+    margin: 0 10px; /* 画像間の余白 */
+  }
+
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+/* アクセス */
+.map-section h2 {
+    font-size: 40px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.map-container {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-bottom: 45px;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 400px; /* 高さは自由に調整 */
+    border-radius: 10px; /* 角を少し丸くする（任意） */
+}
+
+/* コンテナを使って左右に配置 */
+.map-section .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* 上揃え */
+    margin-top: 40px;
+    margin: 0 auto;
+}
+
+.map-section .box {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    margin-bottom: 25px;
+}
+
+.map-section h2 {
+    text-align: center;
+}
+
+.map-section .text {
+    font-size: 30px;
+    font-weight: 300;
+    margin-left: 20px;
+}
+
+/* 左側の地図部分 */
+.left-column {
+    width: 60%; /* 左側のカラムの幅 */
+    padding-right: 20px;
+}
+
+/* 右側のSNSリンクと連絡先部分 */
+.right-column {
+    width: 35%; /* 右側のカラムの幅 */
+    padding-left: 20px;
+}
+
+/* ソーシャルメディアリンク（画像） */
+.social-links a {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.social-links img {
+    width: 100px; /* 任意でサイズを調整 */
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%; /* 画像を丸くする場合 */
+}
+
+/* 電話番号部分 */
+.phone-number p {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.phone-number a {
+    text-decoration: none;
+    color: #fff; /* 文字色 */
+    font-weight: bold;
+}
+
+footer {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #000000;
+    padding: 40px 0;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-weight: 700;
+}
