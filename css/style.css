@@ -1,4 +1,9 @@
 /* 共通 */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+  }
+
 body {
     font-family: 'Zen kaku Gothic New', sans-serif;
     color: #ffffff;
@@ -33,7 +38,6 @@ header {
     position: fixed; /*← fixedで固定 */
     width: 100%;
     font-weight: 700;
-    width: 100%;
     z-index: 3;
 }
 
@@ -220,89 +224,83 @@ header li:hover {
   }
 
 /* アクセス */
-.map-section h2 {
-    font-size: 40px;
-    font-weight: 500;
-    text-align: center;
-    margin-bottom: 20px;
+.access {
+    width: 100%;
 }
 
-.map-container {
-    width: 90%;
-    max-width: 800px;
+.access h2 {
+    margin-bottom: 25px;
+    font-size: 45px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.access .container {
     margin: 0 auto;
+    width: 100%;
+    text-align: center;
     margin-bottom: 45px;
 }
 
-.map-container iframe {
-    width: 100%;
-    height: 400px; /* 高さは自由に調整 */
-    border-radius: 10px; /* 角を少し丸くする（任意） */
-}
-
-/* コンテナを使って左右に配置 */
-.map-section .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start; /* 上揃え */
-    margin-top: 40px;
+.access .map-container {
+    width: 95%;
+    max-width: 800px;
     margin: 0 auto;
 }
 
-.map-section .box {
-    display: flex;
-    align-items: center;
-    width: 80%;
-    margin-bottom: 25px;
+.access iframe {
+    width: 90%;
+    border-radius: 10px;
 }
 
-.map-section h2 {
+/* コンタクト */
+.contact {
+    width: 100%;
     text-align: center;
 }
 
-.map-section .text {
-    font-size: 30px;
-    font-weight: 300;
-    margin-left: 20px;
+.contact h2 {
+    margin-bottom: 45px;
+    font-size: 45px;
+    font-weight: 700;
 }
 
-/* 左側の地図部分 */
-.left-column {
-    width: 60%; /* 左側のカラムの幅 */
-    padding-right: 20px;
+.contact .container {
+    width: 100%;
+    padding-bottom: 45px;
 }
 
-/* 右側のSNSリンクと連絡先部分 */
-.right-column {
-    width: 35%; /* 右側のカラムの幅 */
-    padding-left: 20px;
+.contact .social-container {
+    width: 95%;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
-/* ソーシャルメディアリンク（画像） */
-.social-links a {
-    display: block;
-    margin-bottom: 10px;
+.contact .box {
+    /* background-color: lightgray; */
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
 }
 
-.social-links img {
-    width: 100px; /* 任意でサイズを調整 */
-    height: 100px;
-    object-fit: cover;
-    border-radius: 50%; /* 画像を丸くする場合 */
+.contact img {
+    width: 130px;
+    height: 130px;
+    flex-shrink: 0;
 }
 
-/* 電話番号部分 */
-.phone-number p {
-    font-size: 18px;
-    margin-top: 20px;
+.contact .text {
+    font-size: 25px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
 }
 
-.phone-number a {
-    text-decoration: none;
-    color: #fff; /* 文字色 */
-    font-weight: bold;
-}
-
+/* フッター */
 footer {
     width: 100%;
     margin: 0 auto;
@@ -312,4 +310,62 @@ footer {
     font-family: 'Times New Roman', Times, serif;
     font-size: 20px;
     font-weight: 700;
+}
+
+/* スマホ対応 */
+@media (max-width: 768px) {
+    header .low {
+        font-size: 15px;
+    }
+
+    .section1 h1 {
+        font-size: 50px;
+    }
+
+    .section1 .text {
+        font-size: 13px;
+    }
+
+    .section2 h2 {
+        font-size: 37px;
+    }
+
+    .section2 .text {
+        font-size: 15px;
+        padding: 0 20px;
+    }
+
+    .section2 hr {
+        width: 70%;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+
+    .section2 img {
+        width: 300px;
+        height: 300px;
+    }
+
+    .gallery-track img {
+        width: 200px; /* 画像の幅（お好みで調整） */
+        height: 150px; /* 画像の高さ（お好みで調整） */
+      }
+
+    .contact .box {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact img {
+        /* margin-bottom: 5px; */
+    }
+
+    footer {
+        width: 100%;
+        font-size: 15px;
+    }
+
+    footer h2 {
+        padding: 0 10px;
+    }
 }
